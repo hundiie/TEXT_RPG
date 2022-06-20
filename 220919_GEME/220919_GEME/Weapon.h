@@ -10,7 +10,7 @@ public:
 	weapon& operator=(const weapon&) = delete;
 	static void WeaponPrint()
 	{
-		std::string Now[2] = { "무기   레벨","방어구 레벨"};
+		std::string Now[2] = { "곡괭이 레벨","방어구 레벨"};
 		int now[2] = { W_UPGREAD,D_UPGREAD };
 
 		for (int i = 0; i < 2; i++)

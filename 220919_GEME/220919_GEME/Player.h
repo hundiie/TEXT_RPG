@@ -63,6 +63,7 @@ public:
 	static void EXP_ADD(int num) { EXP = num; }
 	static void EXP_PLUS(int num) { EXP += num; }
 
+	static int STR_CHECK() { return STR+WSTR; }
 	static void STR_ADD(int num) { STR = num; }
 	static void STR_PLUS(int num) { STR += num; }
 

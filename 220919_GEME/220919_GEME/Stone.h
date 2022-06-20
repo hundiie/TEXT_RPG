@@ -16,23 +16,24 @@ public:
 		int g = rand() % 5;
 
 	}
+	static void stac_PLUS(int a, int b)
+	{
+		STAC[a] += b;
+	}
 
+	static int STONE_CHECK(int a)
+	{
+		return STAC[a];
+	}
 
 private:
-	static string stone_1[5];
-	static struct STONE
-	{
-		int MAXHP;
-		int HP;
-		int GOLD;
-		
-	}A[20];
 
+	static int STAC[4];
 	//static string stone_2[5];
 	//static string stone_3[5];
 	//static string stone_4[5];
 };
 
-string stone::stone_1[5] = { "1¹ø ±¤¹°", "2¹ø ±¤¹°", "3¹ø ±¤¹°", "4¹ø ±¤¹°", "5¹ø ±¤¹°", };
+int stone::STAC[4] = { 0 };
 
 

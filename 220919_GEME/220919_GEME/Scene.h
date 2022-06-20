@@ -2,6 +2,7 @@
 #include "common.h"
 #include "Player.h"
 #include "Weapon.h"
+#include "Stone.h"
 
 using namespace std;
 
@@ -337,7 +338,7 @@ void Scene()
 
 		scene_Number(20)//ÇÏ±Þ ±¤»ê
 		{
-			cout << "ÇÏ±Þ ±¤»ê";
+			cout << "ÇÏ±Þ ±¤»ê    BOSS½ºÅÃ :"<< stone::STONE_CHECK(0);
 			std::string A[2] = {
 				  "µ·+ 50",
 				  "µ¹¾Æ°¡±â"
@@ -351,6 +352,7 @@ void Scene()
 				player::Money_PLUS(50);
 				player::HP_PLUS(-10);
 				TalkText("µ· + 50, Ã¼·Â - 10");
+				stone::stac_PLUS(0,player::STR_CHECK());
 			}
 				  break;
 			case 2: {Scene_Move(2); }
@@ -362,7 +364,7 @@ void Scene()
 		}
 		scene_Number(21)//Áß±Þ ±¤»ê
 		{
-			cout << "Áß±Þ ±¤»ê";
+			cout << "Áß±Þ ±¤»ê    BOSS½ºÅÃ :" << stone::STONE_CHECK(1);
 			std::string A[2] = {
 				  "µ·+ 100",
 				  "µ¹¾Æ°¡±â"
@@ -376,6 +378,7 @@ void Scene()
 				player::Money_PLUS(100);
 				player::HP_PLUS(-20);
 				TalkText("µ· + 100, Ã¼·Â - 20");
+				stone::stac_PLUS(1, player::STR_CHECK());
 			}
 				  break;
 			case 2: {Scene_Move(2); }
@@ -387,7 +390,7 @@ void Scene()
 		}
 		scene_Number(22)//»ó±Þ ±¤»ê
 		{
-			cout << "»ó±Þ ±¤»ê";
+			cout << "»ó±Þ ±¤»ê    BOSS½ºÅÃ :" << stone::STONE_CHECK(2);
 			std::string A[2] = {
 				  "µ·+ 200",
 				  "µ¹¾Æ°¡±â"
@@ -401,6 +404,7 @@ void Scene()
 				player::Money_PLUS(200);
 				player::HP_PLUS(-40);
 				TalkText("µ· + 200, Ã¼·Â - 40");
+				stone::stac_PLUS(2, player::STR_CHECK());
 			}
 				  break;
 			case 2: {Scene_Move(2); }
@@ -412,7 +416,7 @@ void Scene()
 		}
 		scene_Number(23)//ÃÖ»ó±Þ ±¤»ê
 		{
-			cout << "ÃÖ»ó±Þ ±¤»ê";
+			cout << "ÃÖ»ó±Þ ±¤»ê    BOSS½ºÅÃ :" << stone::STONE_CHECK(3);
 			std::string A[2] = {
 				  "µ·+ 500",
 				  "µ¹¾Æ°¡±â"
@@ -426,6 +430,7 @@ void Scene()
 				player::Money_PLUS(500);
 				player::HP_PLUS(-100);
 				TalkText("µ· + 500, Ã¼·Â - 100");
+				stone::stac_PLUS(3, player::STR_CHECK());
 			}
 				  break;
 			case 2: {Scene_Move(2); }
