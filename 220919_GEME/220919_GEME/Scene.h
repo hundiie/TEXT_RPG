@@ -167,6 +167,7 @@ void Scene()
 			}
 			continue;
 		}
+
 		scene_Number(5)
 		{
 			cout << "±³È¸";
@@ -351,6 +352,7 @@ void Scene()
 			case 1: {Scene_Move(20);
 				player::Money_PLUS(50);
 				player::HP_PLUS(-10);
+				player::EXP_PLUS(10);
 				TalkText("µ· + 50, Ã¼·Â - 10");
 				stone::stac_PLUS(0,player::STR_CHECK());
 			}
@@ -377,6 +379,7 @@ void Scene()
 			case 1: {Scene_Move(21);
 				player::Money_PLUS(100);
 				player::HP_PLUS(-20);
+				player::EXP_PLUS(20);
 				TalkText("µ· + 100, Ã¼·Â - 20");
 				stone::stac_PLUS(1, player::STR_CHECK());
 			}
@@ -403,6 +406,7 @@ void Scene()
 			case 1: {Scene_Move(22);
 				player::Money_PLUS(200);
 				player::HP_PLUS(-40);
+				player::EXP_PLUS(40);
 				TalkText("µ· + 200, Ã¼·Â - 40");
 				stone::stac_PLUS(2, player::STR_CHECK());
 			}
@@ -429,6 +433,7 @@ void Scene()
 			case 1: {Scene_Move(23);
 				player::Money_PLUS(500);
 				player::HP_PLUS(-100);
+				player::EXP_PLUS(100);
 				TalkText("µ· + 500, Ã¼·Â - 100");
 				stone::stac_PLUS(3, player::STR_CHECK());
 			}
