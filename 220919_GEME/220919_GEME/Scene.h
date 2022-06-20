@@ -278,6 +278,7 @@ void Scene()
 				{
 					weapon::WeaponW_Upgrade(); 
 					player::Money_PLUS(-20);
+					talk = true;
 				}
 				else
 				{
@@ -309,6 +310,7 @@ void Scene()
 				{
 					weapon::WeaponD_Upgrade();
 					player::Money_PLUS(-20);
+					talk = true;
 				}
 				else
 				{

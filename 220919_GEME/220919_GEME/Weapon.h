@@ -35,10 +35,12 @@ public:
 		
 		if (random < 100 - W_UPGREAD)
 		{
+			player::talk("강화 성공");
 			W_UPGREAD += 1;
 		}
 		else
 		{
+			player::talk("강화 실패");
 			W_UPGREAD -= 1;
 		}
 		player::WSTR_ADD(W_UPGREAD);
@@ -50,10 +52,12 @@ public:
 
 		if (random < 100 - D_UPGREAD)
 		{
+			player::talk("강화 성공");
 			D_UPGREAD += 1;
 		}
 		else
 		{
+			player::talk("강화 실패");
 			D_UPGREAD -= 1;
 		}
 		player::DHP_ADD(D_UPGREAD * 10);
