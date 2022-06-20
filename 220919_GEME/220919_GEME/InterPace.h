@@ -42,8 +42,6 @@ void inte_explanation()
 	inte_CuserMove(0, 0);
 }
 
-
-
 /// <summary>
 /// 선택지 출력
 /// </summary>

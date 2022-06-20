@@ -18,6 +18,26 @@ bool talk = false;
 
 void SCENE_Init()
 {
+	system("cls");
+	inte_explanation();
+	if (SCENE != 1)
+	{
+		player::printStatus();
+		weapon::WeaponPrint();
+	}
+	if (player::HP_CHECK() <= 0)
+	{
+		SCENE = 2;
+		TalkText("당신은 죽었습니다.(돈 80% 감소)");
+		player::Money_ADD((player::Money_CHECK() / 5));
+		player::HP_ADD(10);
+	}
+	if (talk == true)
+	{
+		player::talkPrint();
+	}
+
+	talk = false;
 }
 
 void Initpage()
@@ -41,26 +61,7 @@ void Scene()
 {
 	while (true)
 	{
-		system("cls");
-		inte_explanation();
-		if (SCENE != 1)
-		{
-			player::printStatus();
-			weapon::WeaponPrint();
-		}
-		if (player::HP_CHECK() <= 0)
-		{
-			SCENE = 2;
-			TalkText("당신은 죽었습니다.(돈 80% 감소)");
-			player::Money_ADD((player::Money_CHECK() / 5));
-			player::HP_ADD(10);
-		}
-		if (talk == true)
-		{
-			player::talkPrint();
-		}
-
-		talk = false;
+		SCENE_Init();
 
 		scene_Number(1)//타이틀
 		{
@@ -447,3 +448,4 @@ void Scene()
 		}
 	}
 }
+
